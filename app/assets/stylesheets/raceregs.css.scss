@@ -1,0 +1,27 @@
+// Place all the styles related to the Raceregs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+aside#sidebar {
+  width: 200px;
+  float: right;
+  clear: both;
+  }
+
+  h1 {
+    color: $secondary-text-color;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  table {
+	margin: 1.5em auto;
+	border-bottom: 1px solid #999;
+	border-collapse: collapse;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius: 8px 8px 0 0;
+	border-radius: 8px 8px 0 0;
+	background: #444;
+}

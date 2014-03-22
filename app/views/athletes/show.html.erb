@@ -1,0 +1,73 @@
+<article id="athlete" class="athlete">
+	<header>
+		<%= image_for(@athlete) %>
+		<h2><%= @athlete.first_name %> <%= @athlete.last_name %></h2>
+	</header>
+
+
+	<h3>Birthdate:</h3>
+	<p>
+		<%= @athlete.birthdate %>
+	</p>
+
+	<h3>Age</h3>
+	<p>
+		<%= @athlete.age %>
+	</p>
+
+	<h3>Address </h3>
+	<p>
+		<%= @athlete.address_one %><br />
+		<%= @athlete.address_two %><br />
+		<%= @athlete.city %>, 
+		<%= @athlete.state %><br/>
+		<%= @athlete.zip %>
+	</p>
+
+	<h3>Previous Races</h3>
+		 <% if @athlete.previous_races.any? %>
+
+			<% @athlete.previous_races.each do |r|  %>
+				<p><%= r.name %>, <%= r.date %></p>
+    		<% end %>
+
+    	<% else %>
+    		<p>No Previous Races</p>
+    	<% end %>
+
+
+	<h3>Upcoming Races</h3>
+		 <% if @athlete.upcoming_races.any? %>
+
+			<% @athlete.upcoming_races.each do |r|  %>
+				<p><%= r.name %>, <%= r.date %></p>
+    		<% end %>
+
+    	<% else %>
+    		<p>No Upcoming Races</p>
+    	<% end %>
+
+<!--
+	<h3>Next Race</h3>
+	<%#= format_next_race(@athlete) %>
+-->
+
+
+<footer>
+
+	<%= link_to pluralize(@athlete.raceregs.size, "race registration"), athlete_raceregs_path(@athlete), class: 'button' %>
+	<%= link_to "Add a Race", new_athlete_racereg_path(@athlete), class: 'button ok review'  %>
+
+	
+<nav>
+	<%= link_to "Edit", edit_athlete_path(@athlete), class: 'button' %> | 
+	<%= link_to "Delete", @athlete, 
+				class: 'button', 
+				method: :delete, data: {confirm: 'Are you sure?'} %> 
+</nav>
+
+</footer>
+
+</article>
+
+

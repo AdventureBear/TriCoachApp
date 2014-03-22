@@ -1,0 +1,60 @@
+<article>
+<header><h1><%= pluralize(@athlete.raceregs.size, "race registration") %> for <%= link_to(@athlete.first_name, @athlete) %> <%= link_to(@athlete.last_name, @athlete) %></h1>
+</header>
+
+
+
+<table class = "wide">
+<thead>
+	<th scope="col">Name</th>
+	<th scope="col">Priority</th>
+	<th scope="col">Date</th>
+	<th scope="col">Comment</th>
+	<th scope="col">Edit</th>
+	<th scope="col">Delete</th>
+</thead>
+	<%   @raceregs.each do |racereg| %>
+		<tr>
+		<td class= "raceregs">
+			
+			<%= racereg.name %>
+		</td>
+		<td class = "priority">
+
+			  <%=racereg.priority %> 
+			
+		</td>
+		<td class= "date">
+			
+		 <%= racereg.date %>
+		
+		</td>
+		<td class= "comment">
+		
+		 <%= racereg.comment %>
+		
+		</td>
+		<td>
+			<%= link_to edit_racereg_image, [@athlete, racereg] %>
+		</td>
+		<td>
+			<%= link_to delete_racereg_image, [@athlete, racereg], 
+				id: "#{dom_id(racereg)}_delete",
+				method: :delete, 
+				data: {confirm: 'Are you sure you want to delete this Race Registration?'} %> 
+		</td>
+		</tr>
+
+	<% end %>
+</table>
+
+<footer>
+	<nav>
+
+	<%= link_to "Add a Race", new_athlete_racereg_path(@athlete), class: 'button ok review'  %> | 
+	<%= link_to "Show Athlete", athlete_path(@athlete), class: 'button review' %> 
+	
+</nav>
+
+</footer>
+</article> 

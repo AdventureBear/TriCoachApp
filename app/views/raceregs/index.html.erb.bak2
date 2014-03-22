@@ -1,0 +1,34 @@
+<header><h1>Race Registrations for <%= link_to(@athlete.first_name, @athlete) %> <%= link_to(@athlete.last_name, @athlete) %></h1>
+</header>
+
+
+<ol class = "raceregs" id = "raceregs">
+<table>
+
+	<%   @raceregs.each do |racereg| %>
+		<tr>
+		<td><li><span class = "raceregs">
+			
+			<%= racereg.name %>,  Priority: <%=racereg.priority %> 
+			</span>
+		</td>
+		<td>
+			<p>
+			<span class = "date">
+				on <%= racereg.date %>
+			</span>
+		</p>
+		</td>
+		<td>
+			<p>
+			<span class = "user">
+				Comment: <%= racereg.comment %>
+			</span>
+			</p>
+			</li>
+		</td>
+		</tr>
+
+	<% end %>
+
+</ol>

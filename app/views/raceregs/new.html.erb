@@ -1,0 +1,32 @@
+<header id="content header">
+	<h1>Add a Race Registration for <%= link_to(@athlete.first_name, @athlete) %></h1>
+</header>
+
+<%= form_for([@athlete, @racereg]) do |f| %>
+  <%= render "shared/errors", object: @racereg %>
+
+<fieldset>
+	<ol>
+		<li class="required">	
+			<%= f.label :name %><br />
+			<%= f.text_field :name,  autofocus: true %>
+		</li>
+		<li class = "required">
+			<%= f.label :date %><br />
+			<%= f.date_select :date %>
+		</li>
+		<li class = "required stars">
+			<%= f.label :priority %><br />
+			<%= f.select :priority, Racereg::PRIORITIES, prompt: "Pick One" %>
+		</li>
+		<li class = "required">
+			<%= f.label :comment %><br />
+			<%= f.text_field :comment %>
+		</li>
+
+		<li class = "required">
+			<%= f.submit %>
+		</li>
+	</ol>
+</fieldset>
+<% end %>
