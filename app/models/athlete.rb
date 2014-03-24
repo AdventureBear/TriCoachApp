@@ -22,6 +22,7 @@ class Athlete < ActiveRecord::Base
 
 
 
+
 	def previous_races
 		raceregs.where( "date <?", Time.now).order("date asc")
 	end

@@ -1,4 +1,8 @@
 class AthletesController < ApplicationController
+	before_action :require_signin, except: [:index, :show]
+	before_action :require_admin, except: [:index, :show]
+
+
 	def index
 #		@athletes=Athlete.all()
 #		@athletes=Athlete.under_thirty
@@ -55,5 +59,9 @@ private
 		athlete_params = params.require(:athlete).
 	  			permit(:first_name, :last_name, :birthdate, :address_one, :address_two, :city, :state, :zip, :image_file_name)
 	end
+
+
+
+
 end
 

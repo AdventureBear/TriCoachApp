@@ -40,7 +40,7 @@
 		 <% if @athlete.upcoming_races.any? %>
 
 			<% @athlete.upcoming_races.each do |r|  %>
-				<p><%= r.name %>, <%= r.date %></p>
+				<p><%= r.date %>:  <%= r.name %> </p>
     		<% end %>
 
     	<% else %>
@@ -60,10 +60,12 @@
 
 	
 <nav>
+	<% if current_user_admin? %>
 	<%= link_to "Edit", edit_athlete_path(@athlete), class: 'button' %> | 
 	<%= link_to "Delete", @athlete, 
 				class: 'button', 
 				method: :delete, data: {confirm: 'Are you sure?'} %> 
+	<% end %>
 </nav>
 
 </footer>

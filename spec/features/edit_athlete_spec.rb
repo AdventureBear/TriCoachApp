@@ -1,5 +1,10 @@
 require 'spec_helper'
 
+before do
+  admin = User.create!(user_attributes(admin: true))
+  sign_in(admin)
+end
+
 describe "Editing an athlete" do 
 	it "updates the athlete and shows the athlete's updated details" do
 

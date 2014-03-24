@@ -1,5 +1,6 @@
 require 'spec_helper'
 
+
 describe "Deleting a " do 
   it "destroys the athlete and shows the athlete listing without the deleted athlete" do
     athlete = Athlete.create(athlete_attributes)

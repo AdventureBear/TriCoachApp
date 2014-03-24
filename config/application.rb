@@ -28,6 +28,8 @@ module Tricoachapp
       I18n.enforce_available_locales = true 
   end
 
-
+#config.generators do |g|
+#  g.test_framework false
+#end
 
 end

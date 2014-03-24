@@ -1,7 +1,7 @@
 <ul id="athletes">
 	<% @athletes.each do |athlete| %>
 <li>
-<article class="athlete" id="<%= dom_id(athlete) %>">
+	<article class="athlete" id="<%= dom_id(athlete) %>">
 	<header>
 		<h2><%= link_to athlete.first_name, athlete %> <%= link_to athlete.last_name, athlete %></h2>
 			<%= image_for(athlete) %>

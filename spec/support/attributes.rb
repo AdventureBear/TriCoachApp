@@ -22,3 +22,12 @@ def racereg_attributes(overrides = {})
     comment: "I want to win a fish"
   }.merge(overrides)
 end
+
+def user_attributes(overrides = {})
+  {
+    name: "Example User",
+    email: "user@example.com",
+    password: "secretword",
+    password_confirmation: "secretword"
+  }.merge(overrides)
+end
