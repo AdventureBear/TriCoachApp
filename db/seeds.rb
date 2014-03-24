@@ -27,3 +27,48 @@ Athlete.create!([
     birthdate: "1964-05-02"
   }
 ])
+
+
+User.create!([
+{
+  name: "Suzanne",
+  email: "suzanneatkinson@gmail.com",
+  password: "abracadabra2014",
+  password_confirm: "abracadabra2014",
+  admin: True 
+  coach: True
+  athlete: True
+}
+
+{
+  name: "Demo Admin",
+  email: "demo_admin@gmail.com",
+  password: "Demo2014",
+  password_confirm: "Demo2014",
+  admin: True   
+  coach: True
+  athlete: True
+}
+
+{
+  name: "Demo Coach",
+  email: "demo_coach@gmail.com",
+  password: "Demo2014",
+  password_confirm: "Demo2014",
+  admin: False   
+  coach: True
+  athlete: True
+}
+
+{
+  name: "Demo Athlete",
+  email: "demo_athlete@gmail.com",
+  password: "Demo2014",
+  password_confirm: "Demo2014",
+  admin: False   
+  coach: False
+  athlete: True
+}
+
+
+])
