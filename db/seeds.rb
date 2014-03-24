@@ -30,15 +30,7 @@ Athlete.create!([
 
 
 User.create!([
-{
-  name: "Suzanne",
-  email: "suzanneatkinson@gmail.com",
-  password: "abracadabra2014",
-  password_confirmation: "abracadabra2014",
-  admin: "True",
-  coach: "True",
-  athlete: "True"
-},
+
 
 {
   name: "Demo Admin",
