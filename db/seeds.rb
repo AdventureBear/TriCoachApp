@@ -35,39 +35,39 @@ User.create!([
   email: "suzanneatkinson@gmail.com",
   password: "abracadabra2014",
   password_confirm: "abracadabra2014",
-  admin: True,
-  coach: True,
-  athlete: True
-}
+  admin: "True",
+  coach: "True",
+  athlete: "True"
+},
 
 {
   name: "Demo Admin",
   email: "demo_admin@gmail.com",
   password: "Demo2014",
   password_confirm: "Demo2014",
-  admin: True,   
-  coach: True,
-  athlete: True
-}
+ admin: "True",
+  coach: "True",
+  athlete: "True"
+},
 
 {
   name: "Demo Coach",
   email: "demo_coach@gmail.com",
   password: "Demo2014",
   password_confirm: "Demo2014",
-  admin: False,   
-  coach: True,
-  athlete: True
-}
+  admin: "False",
+  coach: "True",
+  athlete: "True"
+},
 
 {
   name: "Demo Athlete",
   email: "demo_athlete@gmail.com",
   password: "Demo2014",
   password_confirm: "Demo2014",
-  admin: False,   
-  coach: False,
-  athlete: True
+  admin: "False",
+  coach: "False",
+  athlete: "True"
 }
 
 
