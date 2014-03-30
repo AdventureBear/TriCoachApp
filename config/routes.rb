@@ -3,6 +3,8 @@ Tricoachapp::Application.routes.draw do
 
   resources :users
 
+  resources :races 
+  
 	root   "athletes#index"
   	resources :athletes do
   		resources :raceregs
