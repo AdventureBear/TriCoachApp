@@ -1,11 +1,11 @@
 class UpdateUsersAttributesFromAthletes < ActiveRecord::Migration
   
 
-  class Users < ActiveRecord::Base
+  class User < ActiveRecord::Base
   	
   end
 
-  class Athletes < ActiveRecord::Base
+  class Athlete < ActiveRecord::Base
   
   end
 
