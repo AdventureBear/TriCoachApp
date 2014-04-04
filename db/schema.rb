@@ -11,26 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140404033925) do
+ActiveRecord::Schema.define(version: 20140404043352) do
 
   create_table "athletes", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.date     "birthdate"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "address_one"
-    t.string   "address_two"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
-    t.string   "image_file_name"
     t.integer  "user_id"
   end
 
   create_table "raceregs", force: true do |t|
-    t.string   "name"
-    t.date     "date"
     t.string   "priority"
     t.text     "comment"
     t.integer  "athlete_id"

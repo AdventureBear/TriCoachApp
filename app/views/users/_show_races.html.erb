@@ -1,0 +1,22 @@
+<h3>Previous Races</h3>
+		 <% if @user.previous_races.any? %>
+
+			<% @user.previous_races.each do |r|  %>
+				<p><%= r.name %>, <%= r.race_date %></p>
+    		<% end %>
+
+    	<% else %>
+    		<p>No Previous Races</p>
+    	<% end %>
+
+
+	<h3>Upcoming Races</h3>
+		 <% if @user.upcoming_races.any? %>
+
+			<% @user.upcoming_races.each do |r|  %>
+				<p><%= r.race_date %>:  <%= r.name %> </p>
+    		<% end %>
+
+    	<% else %>
+    		<p>No Upcoming Races</p>
+    	<% end %>

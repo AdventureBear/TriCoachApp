@@ -6,11 +6,13 @@ class AthletesController < ApplicationController
 	def index
 #		@athletes=Athlete.all()
 #		@athletes=Athlete.under_thirty
-		@athletes=Athlete.order('last_name')
+#		@athletes=Athlete.order('last_name')
+		@athletes=User.where(athlete: true).order('last_name')
 	end
 
 	def show
-		@athlete=Athlete.find(params[:id])
+		#@athlete=Athlete.find(params[:id])
+		@athletes=User.where(athlete: true).find(params[:id])
 	end
 
 	def edit

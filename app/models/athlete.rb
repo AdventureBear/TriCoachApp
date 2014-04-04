@@ -1,13 +1,13 @@
 class Athlete < ActiveRecord::Base
 
-	has_many :raceregs, :dependent=> :destroy
+	
 
-	validates :first_name, :last_name,  presence: true
+#	validates :first_name, :last_name,  presence: true
 
-	validates :image_file_name, allow_blank: true, format: {
-  with:    /\w+.(gif|jpg|png)\z/i,
-  message: "must reference a GIF, JPG, or PNG image"
-}
+#	validates :image_file_name, allow_blank: true, format: {
+#  with:    /\w+.(gif|jpg|png)\z/i,
+#  message: "must reference a GIF, JPG, or PNG image"
+# }
 
 	def self.under_thirty
 		where("birthdate >= ?", 30.years.ago).order("last_name desc")

@@ -1,0 +1,22 @@
+<p class="user-image"><%= image_for(@user) %></p>
+
+
+
+	<h3>Birthdate:</h3>
+	<p>
+		<%= @user.birthdate %>
+	</p>
+
+	<h3>Age</h3>
+	<p>
+		<%= format_age(@user) %>
+	</p>
+
+	<h3>Address </h3>
+	<p>
+		<%= @user.address_one %><br />
+		<%= @user.address_two %><br />
+		<%= @user.city %>, 
+		<%= @user.state %><br/>
+		<%= @user.zip %>
+	</p>

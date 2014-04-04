@@ -1,7 +1,9 @@
 class Racereg < ActiveRecord::Base
-  belongs_to :athlete
+  belongs_to :user
+  belongs_to :race
 
-  validates :name, :date, :priority, presence:true
+
+  validates :priority, presence:true
 
   PRIORITIES = ["A", "B", "C"]
 
