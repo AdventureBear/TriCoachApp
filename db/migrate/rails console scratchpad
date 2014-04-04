@@ -1,0 +1,12 @@
+athlete = Athlete.find_by(first_name: 'John', last_name: 'Torhan')
+ fullname = athlete.first_name + " " +  athlete.last_name
+  user = User.find_or_create_by(name: fullname)
+
+  user.email = 'testathlete' + user.id + '@gmail.com'
+  user.password = abracadabra'
+  user.password_confirmation='abracadabra'
+   user.save
+   athlete.user_id=user.id
+    athlete.save
+
+

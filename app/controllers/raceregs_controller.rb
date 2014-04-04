@@ -9,6 +9,9 @@ class RaceregsController < ApplicationController
 		@racereg = @athlete.raceregs.new
 	end
 
+	def show
+	end
+
 	def create
 		@racereg = @athlete.raceregs.new (racereg_params)
 		if @racereg.save

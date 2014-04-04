@@ -28,14 +28,14 @@ describe "Viewing the list of athletes" do
 	end
 
 
-	it "does not show athletes older than the age of 30" do
+#	it "does not show athletes older than the age of 30" do
+#
+# 		athlete = Athlete.new(athlete_attributes(birthdate: 40.years.ago))
+#  		athlete.save
 
-  		athlete = Athlete.new(athlete_attributes(birthdate: 40.years.ago))
-  		athlete.save
+#  		visit athletes_path
 
-  		visit athletes_path
-
-  		expect(page).not_to have_text(athlete.first_name)
+ # 		expect(page).not_to have_text(athlete.first_name)
 
 	end
 	

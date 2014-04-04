@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140328060530) do
+ActiveRecord::Schema.define(version: 20140404024821) do
 
   create_table "athletes", force: true do |t|
     t.string   "first_name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20140328060530) do
     t.string   "state"
     t.string   "zip"
     t.string   "image_file_name"
+    t.integer  "user_id"
   end
 
   create_table "raceregs", force: true do |t|
@@ -35,6 +36,8 @@ ActiveRecord::Schema.define(version: 20140328060530) do
     t.integer  "athlete_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "race_id"
   end
 
   add_index "raceregs", ["athlete_id"], name: "index_raceregs_on_athlete_id"
@@ -71,6 +74,15 @@ ActiveRecord::Schema.define(version: 20140328060530) do
     t.boolean  "admin",           default: false
     t.boolean  "coach",           default: false
     t.boolean  "athlete",         default: true
+    t.string   "address_one"
+    t.string   "address_two"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "image_file_name"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.date     "birthdate"
   end
 
 end

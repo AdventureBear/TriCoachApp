@@ -1,0 +1,54 @@
+<article>
+  <header>
+    <h1><%= @race.name %></h1>
+  </header>
+  <h2>Description</h2>
+    <p>
+      <%= @race.description %>
+    </p>
+
+<h3>Race date</h3>
+  <p>
+    <%= @race.race_date %>
+  </p>
+
+
+<h3>Swim Distance</h3>
+  <p>
+    <%= @race.swim_distance %>
+  </p>
+
+<h3>Bike Distance</h3>
+  <p>
+    <%= @race.bike_distance %>
+  </p>
+
+<h3>Run Distance</h3>
+  <p>
+    <%= @race.run_distance %>
+  </p>
+
+
+<!--<h3>Image url</h3>
+  <p> 
+    <%= @race.image_url %>
+  </p>
+ -->
+  
+<h3>Race url</h3>
+  <p>
+    <%= @race.race_url %>
+  </p>
+
+<h3>Category</h3>
+  <p>  
+    <%= @race.race_category %>
+  </p>
+
+
+
+
+<%= link_to 'Edit', edit_race_path(@race) %> |
+<%= link_to 'Back', races_path %>
+
+</article>

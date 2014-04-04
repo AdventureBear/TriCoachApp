@@ -12,4 +12,6 @@ Tricoachapp::Application.routes.draw do
 
   	get 'signup' => 'users#new'
 
+  	
+
 end

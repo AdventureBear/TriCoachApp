@@ -36,6 +36,8 @@ describe "Viewing the list of races" do
 
 	end
 
+it "shows the athletes registered for a specific race" do
+end
 
 
 end

@@ -5,4 +5,14 @@ class RacesController < ApplicationController
 		@races = Race.all
 	end
 
+
+	def show
+		
+		@race = Race.find(params[:id])
+	end
+
+	def edit
+		@race = Race.find(params[:id])
+	end
+
 end
