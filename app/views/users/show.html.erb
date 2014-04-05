@@ -1,30 +1,17 @@
 <article id = "user">
 
 	<header>
+		<p id="user-image"><%= image_for(@user) %></p>
 		<h1><%= @user.name %></h1>
     	<h2><%= mail_to(@user.email) %></h2>
 	</header>
 	
 	<h2>User Roles</h2>
-		<% if @user.athlete? %>
-			<b>User is an athlete!</b>
-		<% end %>
-		<% if @user.coach? %>
-			<b>User is a coach!</b>
-		<% end %>
-		<% if @user.admin? %>
-			<b>User is an admin!</b>
-		<% end %>
+		<%= show_user_roles(@user) %>
 
 	<%= render "show_basics" %>
 	
 		<% if @user.athlete? %>
-<!--				<%= @user.raceregs.count %>
-
-				<% @user.raceregs.each do |r|  %>
-				<p><%= r.race.name %>, <%= r.race.race_date %></p>
-    		<% end %>-->
-
     		<%= render "show_races" %>
 		<% end %>
 

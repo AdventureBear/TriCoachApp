@@ -28,6 +28,15 @@ def user_attributes(overrides = {})
     name: "Example User",
     email: "user@example.com",
     password: "secretword",
-    password_confirmation: "secretword"
+    password_confirmation: "secretword",
+    first_name:"David",           
+    last_name:"Bertrand",      
+    birthdate:"12-01-1989",
+    address_one:"128 Old Suffolk Dr.",
+    address_two:"nil",
+    city:"Monroeville",
+    state:"PA",
+    zip:"15146",
+    image_file_name: "athlete.jpg"
   }.merge(overrides)
 end

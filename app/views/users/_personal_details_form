@@ -1,0 +1,50 @@
+<%= form_for(@user)  do |f| %>
+  <%= render "shared/errors", object: @user %>
+	<fieldset>
+		<ol>
+	<li class="required">	
+		<%= f.label :first_name %><br />
+		<%= f.text_field :first_name,  autofocus: true %>
+
+	</li>
+	<li class="required">
+		<%= f.label :last_name %><br/>
+		<%= f.text_field :last_name %><br/>
+	</li>
+	<li class="required">
+		<%= f.label :address_one %><br/>
+		<%= f.text_field :address_one %><br/>
+	</li>
+	<li class="required">
+		<%= f.label :address_two %><br/>
+		<%= f.text_field :address_two %><br/>
+	</li>
+	<li class="required">
+		<%= f.label :city %><br/>
+		<%= f.text_field :city %><br/>
+	</li>
+	<li class="required">
+		<%= f.label :state %><br/>
+		<%= f.text_field :state %><br/>
+	</li>
+	<li class="required">
+		<%= f.label :zip %><br/>
+		<%= f.text_field :zip %><br/>
+	</li>
+	<li class="required">
+		<%= f.label :birthdate %><br/>
+		<%= f.date_select :birthdate, start_year: 1915 %><br/>
+	</li>
+
+	<li class="required">
+  		<%= f.label :image_file_name %><br/>
+  		<%= f.text_field :image_file_name %>
+	</li>
+	</ol>
+
+	<p>
+		<%= f.submit %>
+		<%= link_to "Cancel", users_path, class: 'button' %>
+	</p>
+	</fieldset>
+<% end %>

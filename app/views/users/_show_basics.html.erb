@@ -1,4 +1,4 @@
-<p class="user-image"><%= image_for(@user) %></p>
+<!-- <p id="user-image"><%= image_for(@user) %></p>-->
 
 
 
@@ -6,6 +6,9 @@
 	<p>
 		<%= @user.birthdate %>
 	</p>
+
+	<h3>User Roles</h2>
+		<%= show_user_roles(@user) %>
 
 	<h3>Age</h3>
 	<p>
@@ -20,3 +23,4 @@
 		<%= @user.state %><br/>
 		<%= @user.zip %>
 	</p>
+

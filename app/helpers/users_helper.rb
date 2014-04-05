@@ -20,4 +20,24 @@ def format_age(user)
     end
 end
 
+
+def show_user_roles(user)
+	content_tag(:b, 'In the helper loop')
+	if user.athlete? 
+		content_tag(:b, 'User is an athlete!')
+	end 
+
+ 	if user.coach? 
+		content_tag(:b, 'User is a coach!') 
+ 	end 
+ 	
+ 	if user.admin? 
+		content_tag(:b, 'User is an admin!') 
+	end 
+
+  
+  content_tag(:b, 'In the helper loop')
+end
+
+
 end
